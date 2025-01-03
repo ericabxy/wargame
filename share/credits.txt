@@ -1,0 +1,11 @@
+* Grid background by Ivan Voirol
+* https://opengameart.org/content/grid-hud
+* Licensed CC-BY 3.0 or GPL 3.0 or GPL 2.0
+
+* Isometric characters and tilesets by Denzi
+* https://opengameart.org/content/denzis-96x96-and-64x64-isometric-tilesets
+* Licensed CC-BY-SA 3.0
+
+* "Eeun's Shipyard" spaceship grphics by Eeun
+* https://opengameart.org/content/eeuns-shipyard-spaceship-graphics
+* Licensed CC0
