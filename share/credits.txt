@@ -9,3 +9,7 @@
 * "Eeun's Shipyard" spaceship grphics by Eeun
 * https://opengameart.org/content/eeuns-shipyard-spaceship-graphics
 * Licensed CC0
+
+* Basic Hud Tiles (+ Alphabet) by Andrew J Hamilton
+* https://opengameart.org/content/basic-hud-tiles-alphabet
+* Licensed CC0

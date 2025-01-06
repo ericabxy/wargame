@@ -1,21 +1,25 @@
---- a short description
+--- an array of particle accelerator beam projectors
 -- @classmod wargame.beam_battery
+local weapon_system = require('src.wargame.weapon_system')
 
 local beam_battery = {}
 
 -- class table
-local BeamBattery = {
+local BeamBattery = weapon_system.new{
   class = 1
 }
 
-function BeamBattery:fire(ship)
-  local tab = {0, 0, 0, 1, 1, 2}
-  local damage = 0
-  for x = 1, self.class do
-    local roll = love.math.random(1, 6)
-    damage = damage + tab[roll]
+function BeamBattery:fire_antiship(ship)
+  local number_of_dice = self.class --TODO: subtract dice due to range
+  local results = self:roll_d6(number_of_dice)
+  local screens = math.min(ship.screens, 2)
+  local hits_t = self.beam_level[screens]
+  local hits = 0
+  for _, result in ipairs(results) do
+    hits = hits + hits_t[result]
   end
-  ship.hull = ship.hull - damage
+  ship:take_damage(hits)
+  print(hits .. ' hits!', ship.hull_remain .. ' hull remaining')
 end
 
 function beam_battery.new(o)
